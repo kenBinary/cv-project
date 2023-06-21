@@ -5,12 +5,12 @@ import Name from "./NameSection";
 import Skills from "./Skills";
 import WorkExperience from "./WorkExperience";
 
-function CvPage() {
+function CvPage({ personalDetails, workData }) {
     return (
         <main>
-            <Name></Name>
-            <Description></Description>
-            <WorkExperience></WorkExperience>
+            <Name personalDetails={personalDetails}></Name>
+            <Description personalDetails={personalDetails}></Description>
+            <WorkExperience workData={workData}></WorkExperience>
             <Education></Education>
             <Skills></Skills>
         </main>

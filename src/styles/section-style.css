@@ -6,38 +6,42 @@
   letter-spacing: 2px;
   border-bottom: 2px solid black;
 }
-
-.name-section>h1 {
+.name-section > h1 {
+  width: 100%;
+  height: max-content;
+}
+.name-section > h3 {
   width: 100%;
 }
 
-.name-section>h3 {
-  width: 100%;
-}
-
-.work-section>.work-overview,
+.work-section > .work-overview,
 .work-section .education-overview,
-.education-section>.work-overview,
+.education-section > .work-overview,
 .education-section .education-overview {
   border-radius: 5px;
   padding: 5px;
   width: 100%;
-  display: block;
   height: 150px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
-
-.work-section>.work-overview> :first-child,
-.work-section .education-overview> :first-child,
-.education-section>.work-overview> :first-child,
-.education-section .education-overview> :first-child {
+.work-section > .work-overview > :first-child,
+.work-section .education-overview > :first-child,
+.education-section > .work-overview > :first-child,
+.education-section .education-overview > :first-child {
   width: 25%;
 }
-
-.work-section>.work-overview> :last-child,
-.work-section .education-overview> :last-child,
-.education-section>.work-overview> :last-child,
-.education-section .education-overview> :last-child {
+.work-section > .work-overview > :nth-child(2),
+.work-section .education-overview > :nth-child(2),
+.education-section > .work-overview > :nth-child(2),
+.education-section .education-overview > :nth-child(2) {
+  width: 75%;
+}
+.work-section > .work-overview > :last-child,
+.work-section .education-overview > :last-child,
+.education-section > .work-overview > :last-child,
+.education-section .education-overview > :last-child {
   width: 75%;
 }
 
@@ -45,16 +49,14 @@
   margin: 0px;
   padding: 0px;
 }
-
-.skills-section>ul {
+.skills-section > ul {
   margin: 0px;
   padding: 0.5rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-
-.skills-section>ul>li {
+.skills-section > ul > li {
   width: 48%;
 }
 
@@ -63,12 +65,25 @@
 .education-input,
 .skill-input {
   display: flex;
+  column-gap: 1rem;
   flex-wrap: wrap;
   row-gap: 7px;
-
-  >input {
-    width: 100%;
-  }
+}
+.details-input input,
+.work-input input,
+.education-input input,
+.skill-input input {
+  width: 100%;
+}
+.details-input > div,
+.work-input > div,
+.education-input > div,
+.skill-input > div {
+  outline: 1px solid black;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 7px;
 }
 
 /*# sourceMappingURL=section-style.css.map */

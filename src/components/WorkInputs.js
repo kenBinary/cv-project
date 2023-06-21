@@ -1,12 +1,13 @@
-export default function WorkInput() {
+import NewData from "./NewData";
+export default function WorkInput({ deleteWorkData, addData, workData, onWorkDataChange }) {
     return (
         <section className="work-input">
             <h3>Work Experience</h3>
-            <input type="text" placeholder="Start Date"></input>
-            <input type="text" placeholder="End Date"></input>
-            <input type="text" placeholder="Position"></input>
-            <input type="text" placeholder="Company Name"></input>
-            <input type="text" placeholder="Description"></input>
+            <button onClick={addData}>Add</button>
+            <button onClick={deleteWorkData}>Delete</button>
+            {workData.map((element, index) => {
+                return <NewData key={element[0]} dataIndex={index} onWorkDataChange={onWorkDataChange}></NewData>
+            })}
         </section>
     );
 }
