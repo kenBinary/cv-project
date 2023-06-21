@@ -1,0 +1,30 @@
+.name-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  border-bottom: 2px solid black;
+  letter-spacing: 2px;
+}
+.name-section > h1 {
+  width: 100%;
+}
+.name-section > h3 {
+  width: 100%;
+}
+
+.work-section > .work-overview {
+  outline: 1px solid black;
+  width: 100%;
+  display: block;
+  height: 150px;
+  display: flex;
+}
+.work-section > .work-overview > :first-child {
+  width: 25%;
+}
+.work-section > .work-overview > :last-child {
+  width: 75%;
+}
+
+/*# sourceMappingURL=section-style.css.map */

@@ -1,16 +1,37 @@
-#root{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-*{
-    box-sizing: border-box;
-}
-#root > main {
-    margin-top: 1rem;
-    aspect-ratio: 16/9;
-    outline: 1px solid black;
-    width: 60%;
-    border-radius: 3px;
-    padding: .5rem;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+  #root {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 1rem;
+  }
+  h1,h2,h3,h4,h5,h6{
+    margin: 0px !important;
+  }
+  h1{
+    margin: 0;
+  }
+  * {
+      font-family: 'Inter', sans-serif;
+      box-sizing: border-box;
+  }
+
+  body {
+      padding: 1rem;
+  }
+
+  main {
+      width: 45% !important;
+      aspect-ratio: 9/16;
+      outline: 1px solid black;
+      border-radius: 3px;
+      padding: .5rem;
+      /* display: grid !important; */
+      /* grid-template-rows: 10% 15% 25% 25% 25%; */
+      display: flex;
+  }
+
+  main>section {
+      padding: 5px;
+  }

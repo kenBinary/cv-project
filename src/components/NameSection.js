@@ -1,5 +1,8 @@
 export default function Name () {
     return (
-        <h1>Name</h1>
+        <section className="name-section">
+            <h1>Jhon Doe</h1>
+            <h3>Software  Engineer</h3>
+        </section>
     );
 }
