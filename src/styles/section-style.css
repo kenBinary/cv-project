@@ -3,8 +3,8 @@
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
-  border-bottom: 2px solid black;
   letter-spacing: 2px;
+  border-bottom: 2px solid black;
 }
 .name-section > h1 {
   width: 100%;
@@ -13,18 +13,43 @@
   width: 100%;
 }
 
-.work-section > .work-overview {
-  outline: 1px solid black;
+.work-section > .work-overview,
+.work-section .education-overview,
+.education-section > .work-overview,
+.education-section .education-overview {
+  border-radius: 5px;
+  padding: 5px;
   width: 100%;
   display: block;
   height: 150px;
   display: flex;
 }
-.work-section > .work-overview > :first-child {
+.work-section > .work-overview > :first-child,
+.work-section .education-overview > :first-child,
+.education-section > .work-overview > :first-child,
+.education-section .education-overview > :first-child {
   width: 25%;
 }
-.work-section > .work-overview > :last-child {
+.work-section > .work-overview > :last-child,
+.work-section .education-overview > :last-child,
+.education-section > .work-overview > :last-child,
+.education-section .education-overview > :last-child {
   width: 75%;
+}
+
+.skills-section {
+  margin: 0px;
+  padding: 0px;
+}
+.skills-section > ul {
+  margin: 0px;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.skills-section > ul > li {
+  width: 48%;
 }
 
 /*# sourceMappingURL=section-style.css.map */

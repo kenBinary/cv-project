@@ -27,8 +27,6 @@
       outline: 1px solid black;
       border-radius: 3px;
       padding: .5rem;
-      /* display: grid !important; */
-      /* grid-template-rows: 10% 15% 25% 25% 25%; */
       display: flex;
   }
 
