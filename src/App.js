@@ -7,6 +7,7 @@ function App() {
   const [personalDetails, setPersonlDetails] = useState(["", "", ""]);
   const [workData, setWorkData] = useState([]);
   const [educationData, setEducationData] = useState([]);
+  const [skills, setSkills] = useState([]);
   function addNewWork() {
     let newId = uniqid();
     let newData = new Array(6).fill("");
@@ -22,7 +23,7 @@ function App() {
   }
   function deleteWorkData() {
     let newData = Array.from(workData);
-    newData.pop();  
+    newData.pop();
     setWorkData(newData)
   }
   function addNewEducation() {
@@ -40,7 +41,7 @@ function App() {
   }
   function deleteEducationData() {
     let newData = Array.from(educationData);
-    newData.pop();  
+    newData.pop();
     setEducationData(newData)
   }
   function changePersonalDetails(event, detail) {
@@ -48,10 +49,27 @@ function App() {
     newDetail[detail] = event.target.value;
     setPersonlDetails(newDetail)
   }
+  function addSkill() {
+    let newId = uniqid();
+    let newSkills = [...skills, [newId, ""]];
+    setSkills(newSkills);
+  }
+  function editSkill(dataSet, dataIndex, event) {
+    let newData = Array.from(skills);
+    let newValue = event.target.value;
+    newData[dataSet][dataIndex] = newValue;
+    setSkills(newData);
+  }
+  function deleteSkill() {
+    let newSkills = Array.from(skills);
+    newSkills.pop();
+    setSkills(newSkills);
+  }
+
   return (
     <>
-      <CvInput editEducation={editEducationData} deleteEducation={deleteEducationData} educationData={educationData} addEducation={addNewEducation} deleteWorkData={deleteWorkData} onInputChange={changePersonalDetails} onWorkDataChange={editWorkData} addData={addNewWork} workData={workData}></CvInput>
-      <CvPage educationData={educationData} personalDetails={personalDetails} workData={workData}></CvPage>
+      <CvInput editSkill={editSkill} deleteSkill={deleteSkill} addSkill={addSkill} skills={skills} editEducation={editEducationData} deleteEducation={deleteEducationData} educationData={educationData} addEducation={addNewEducation} deleteWorkData={deleteWorkData} onInputChange={changePersonalDetails} onWorkDataChange={editWorkData} addData={addNewWork} workData={workData}></CvInput>
+      <CvPage skillsData={skills} educationData={educationData} personalDetails={personalDetails} workData={workData}></CvPage>
     </>
   );
 }

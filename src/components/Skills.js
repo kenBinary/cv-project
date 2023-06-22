@@ -1,20 +1,13 @@
-export default function Skills() {
+export default function Skills({ skillsData }) {
     return (
         <section className="skills-section">
             <h3>Skills</h3>
             <ul>
-                <li>
-                    Skill 1
-                </li>
-                <li>
-                    Skill 1
-                </li>
-                <li>
-                    Skill 1
-                </li>
-                <li>
-                    Skill 1
-                </li>
+                {
+                    skillsData.map((element) => {
+                        return <li key={element[0]}>{element[1]}</li>
+                    })
+                }
             </ul>
         </section>
     );
