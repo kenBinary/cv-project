@@ -1,4 +1,4 @@
-export default function NewData({ dataIndex, onWorkDataChange }) {
+export default function NewData({ dataIndex, onWorkDataChange, placeholder }) {
     return (
         <div>
             <input type="text" placeholder="Start Date" onChange={(event) => {
@@ -7,10 +7,10 @@ export default function NewData({ dataIndex, onWorkDataChange }) {
             <input type="text" placeholder="End Date" onChange={(event) => {
                 onWorkDataChange(dataIndex, 2, event);
             }}></input>
-            <input type="text" placeholder="Position" onChange={(event) => {
+            <input type="text" placeholder={placeholder[0]} onChange={(event) => {
                 onWorkDataChange(dataIndex, 3, event);
             }}></input>
-            <input type="text" placeholder="Company Name" onChange={(event) => {
+            <input type="text" placeholder={placeholder[1]} onChange={(event) => {
                 onWorkDataChange(dataIndex, 4, event);
             }}></input>
             <input type="text" placeholder="Description" onChange={(event) => {

@@ -5,13 +5,13 @@ import Name from "./NameSection";
 import Skills from "./Skills";
 import WorkExperience from "./WorkExperience";
 
-function CvPage({ personalDetails, workData }) {
+function CvPage({ personalDetails, workData, educationData }) {
     return (
         <main>
             <Name personalDetails={personalDetails}></Name>
             <Description personalDetails={personalDetails}></Description>
             <WorkExperience workData={workData}></WorkExperience>
-            <Education></Education>
+            <Education educationData={educationData}></Education>
             <Skills></Skills>
         </main>
     );

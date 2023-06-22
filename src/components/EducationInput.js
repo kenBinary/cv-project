@@ -1,12 +1,14 @@
-export default function EducationInput() {
+import NewData from "./NewData";
+export default function EducationInput({ deleteWorkData, addData, workData, onWorkDataChange }) {
+    let educationPlaceHolder = ["Course", "University"];
     return (
         <section className="education-input">
             <h3>Education</h3>
-            <input type="text" placeholder="Course"></input>
-            <input type="text" placeholder="University"></input>
-            <input type="text" placeholder="Start Date"></input>
-            <input type="text" placeholder="End Date"></input>
-            <input type="text" placeholder="Description"></input>
+            <button onClick={addData}>Add</button>
+            <button onClick={deleteWorkData}>Delete</button>
+            {workData.map((element, index) => {
+                return <NewData placeholder={educationPlaceHolder} key={element[0]} dataIndex={index} onWorkDataChange={onWorkDataChange}></NewData>
+            })}
         </section>
     );
 
